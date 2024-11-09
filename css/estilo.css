@@ -170,7 +170,7 @@ button {
     margin-right: auto;   
     justify-content: center;
     gap: 5px;
-    flex-wrap: wrap;   
+
 }
 .contacto_flex div{
     flex: 1
@@ -178,8 +178,8 @@ button {
 
 /*Formulario de contacto*/
 .formulario input, .formulario textarea  {
-    width: 70%; 
-    padding: 1.2%;
+    width: 80%; 
+    padding: 1.5%;
     font-size: 1rem;
     margin: 1.2%;
     border: 2px solid #c6e2cb;
@@ -188,7 +188,7 @@ button {
 }
 /*Estilos para el mapa */
 .mapa iframe {
-    width: 90%;
+    width: 80%;
     height: 85%;
     border: 2px solid #c6e2cb;
     border-radius: 8px;
@@ -248,4 +248,14 @@ footer a {
         'item5';
         grid-gap: 1%;
      }
+
+     .contacto_flex{
+        flex-direction: column;
+        justify-content: center;
+ 
+    }
+    .busqueda form {
+        flex-direction: column;
+        align-items: center;
+    }
 }
