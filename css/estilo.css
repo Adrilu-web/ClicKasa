@@ -15,7 +15,7 @@ body {
     background-color: #ecf0f1;
     font-size: clamp(1rem, 4vw, 1.2rem);
 }
-/* Estilos para titulos */
+/* ---- Estilos para titulos---- */
 h1, h2 {
     font-size: 2.5rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -31,10 +31,19 @@ h4 {
     font-size: 1.2rem;
 }
 
-/* Estilos para el header , listas*/
+/*---- Estilos para el header , listas ---- */
 header {
-    background-color: #426756;   
+    background: linear-gradient(90deg, rgba(66,103,86,1) 50%, rgba(0,255,205,1) 100%);
     padding: 1%;
+    background-size: 200%;
+    animation: BgGradient 5s ease infinite;
+}
+
+    /* ---- Activar el destello de color de fondo ---- */
+@keyframes BgGradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
 li {
@@ -48,8 +57,13 @@ a {
     font-weight: bold;
     font-size: 1.2rem;
 }
+    /*---- Activar la manito del cursor de los links y cambiar color */
+a:hover {
+    color:rgb(226, 97, 28);
+    cursor: pointer;
+}
 
-/* Estilos para la seccion cabecera  */
+/* ---- Estilos para la seccion cabecera ---- */
 .cabecera {
     background-image: url('../img/cabecera.jpg');
     background-repeat: no-repeat;
@@ -64,7 +78,7 @@ a {
     color: white;
   }
 
-/* Estilos para la sección de propiedades  */
+/* ---- Estilos para la sección de propiedades ---- */
 .propiedad {
     padding: 2% 2%;
 }
@@ -95,15 +109,17 @@ a {
     margin-bottom: 2%;
     font-size: 1rem;
 }
-.propiedad_boton {
+.propiedad_boton, button {
     background-color: #516b56;
     color: white;
     border-radius: 5px;
+    border: none;
     padding: 2%;
     font-size: 1rem;
 }
 
-/* Estilos para el formulario de busqueda  */
+
+/* ---- Estilos para el formulario de busqueda ---- */
 .busqueda {
     padding-top: 2% ;
 }
@@ -115,7 +131,7 @@ a {
     padding-bottom: 1.5%
 }
 .busqueda select, .busqueda input {
-    padding: 10px;
+    padding: 1%;
     font-size: 1rem;
     margin: 10px;
     border: 2px solid #bdc3c7;
@@ -123,19 +139,21 @@ a {
     width: 200px;
     font-family: Kanit, Geneva, Tahoma, sans-serif; 
 }
-/*Estilo para los botones submit*/
+/* ---- Estilo para los botones submit ---- */
 button {
-    background-color: #516b56;
-    color: white;
-    border: none;
-    border-radius: 5px;
     padding: 1%;
-    font-size: 1rem;
     margin: 1%  ;
     font-family: Kanit, Geneva, Tahoma, sans-serif; 
+
+}
+    /*---- Activar la manito del cursor del boton y cambiar color */
+button:hover {
+    background-color:rgb(6, 46, 26);
+    cursor: pointer;
 }
 
-/* Estilos para la sección nosotros, clases testimonio y sobre nosotros */
+
+/* ---- Estilos para la sección nosotros, clases testimonio y nosotros ---- */
 
 .testimonios {
     padding: 0% 1%;
@@ -159,7 +177,7 @@ button {
 .nosotros p {
     padding: 0.5% 2%;
 }
-/*Estilos para la sección contacto: formulario y mapa*/
+/* ---- Estilos para la sección contacto: formulario y mapa ---- */
 #contacto{
     padding-top: 1%;
 }
@@ -170,13 +188,12 @@ button {
     margin-right: auto;   
     justify-content: center;
     gap: 5px;
-
 }
 .contacto_flex div{
     flex: 1
 }
 
-/*Formulario de contacto*/
+/* ---- Formulario de contacto ---- */
 .formulario input, .formulario textarea  {
     width: 80%; 
     padding: 1.5%;
@@ -186,14 +203,14 @@ button {
     border-radius: 5px;
     font-family:Kanit, Geneva, Tahoma, sans-serif; 
 }
-/*Estilos para el mapa */
+/* ---- Estilos para el mapa ---- */
 .mapa iframe {
     width: 80%;
     height: 85%;
     border: 2px solid #c6e2cb;
     border-radius: 8px;
 }
-/* Footer */
+/* ---- Footer ---- */
 footer {
     background: linear-gradient(90deg, rgba(66,103,86,1) 50%, rgba(0,255,205,1) 100%);
     padding: 1.5%;
@@ -202,6 +219,7 @@ footer {
     font-family: Kanit, Geneva, Tahoma, sans-serif;
     font-size: 1.2rem;
 }
+
 .footer_grid {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
@@ -232,7 +250,7 @@ footer a {
     padding:1.5% ;
 }
 
-/* media queries  */
+/* ---- Activar media queries ---- */
 @media (width< 720px) {
     body {
         font-family: Roboto, Geneva, Tahoma, sans-serif;
