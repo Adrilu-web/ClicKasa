@@ -7,19 +7,28 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+/* ---- Definir paleta de colores ---- */
+:root{
+    --blanco: #ffffff;
+    --naranja: #E55812;
+    --verde_claro:#c6e2cb;
+    --fondo: #ecf0f1; 
+    --verde_intermedio: #2A4D14;
+    --azul: #0B3C49;
+}
 
 body {
     font-family:Kanit, Geneva, Tahoma, sans-serif;
     line-height: 1.6;
     text-align: center;
-    background-color: #ecf0f1;
+    background-color: var(--fondo);
     font-size: clamp(1rem, 4vw, 1.2rem);
 }
 /* ---- Estilos para titulos---- */
 h1, h2 {
     font-size: 2.5rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
+    color: var(--blanco);
 }
 
 h3 {
@@ -32,7 +41,7 @@ h4 {
 }
 
 /*---- Estilos para el header , listas ---- */
-header {
+header, footer {
     background: linear-gradient(90deg, rgba(66,103,86,1) 50%, rgba(0,255,205,1) 100%);
     padding: 1%;
     background-size: 200%;
@@ -52,15 +61,20 @@ li {
 }
 
 a {
-    list-style: none;
-    color: white;
+    color: var(--blanco);
     font-weight: bold;
     font-size: 1.2rem;
 }
     /*---- Activar la manito del cursor de los links y cambiar color */
-a:hover {
-    color:rgb(226, 97, 28);
-    cursor: pointer;
+nav a:hover {
+    color: var(--naranja);
+}
+
+button {
+
+    margin: 1%  ;
+    font-family: Kanit, Geneva, Tahoma, sans-serif; 
+    font-weight: bold;
 }
 
 /* ---- Estilos para la seccion cabecera ---- */
@@ -69,13 +83,13 @@ a:hover {
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center;
-    border: 20px solid #ecf0f1;
+    border: 20px solid var(--fondo);
     padding: 15%;
 }
 
 .cabecera p {
     font-size: 1.3rem;
-    color: white;
+    color: var(--blanco);
   }
 
 /* ---- Estilos para la sección de propiedades ---- */
@@ -91,7 +105,7 @@ a:hover {
 }
 
 .propiedad_contenedor div {
-    background-color: #c6e2cb;
+    background-color: var(--verde_claro);
     width: 300px;
     border-radius: 8px;
     padding: 15px;
@@ -105,17 +119,18 @@ a:hover {
 }
 
 .propiedad p {
-    color: rgb(17 73 47);
-    margin-bottom: 2%;
+    margin-bottom: 3%;
     font-size: 1rem;
 }
-.propiedad_boton, button {
-    background-color: #516b56;
-    color: white;
+
+.propiedad_boton {
+    background-color: var(--verde_intermedio);
+    color: var(--blanco);
     border-radius: 5px;
     border: none;
-    padding: 2%;
-    font-size: 1rem;
+    padding: 1%;
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    transition: all .5s ease;
 }
 
 
@@ -134,48 +149,70 @@ a:hover {
     padding: 1%;
     font-size: 1rem;
     margin: 10px;
-    border: 2px solid #bdc3c7;
+    border: 2px solid var(--verde_claro);
     border-radius: 5px;
     width: 200px;
     font-family: Kanit, Geneva, Tahoma, sans-serif; 
 }
-/* ---- Estilo para los botones submit ---- */
-button {
-    padding: 1%;
-    margin: 1%  ;
-    font-family: Kanit, Geneva, Tahoma, sans-serif; 
 
+::placeholder {
+    color: black;
 }
-    /*---- Activar la manito del cursor del boton y cambiar color */
-button:hover {
-    background-color:rgb(6, 46, 26);
+ 
+
+/*---- Activar la manito del cursor del boton y cambiar color */
+.propiedad_boton:hover {
+    background-color:var(--naranja);
     cursor: pointer;
 }
 
-
 /* ---- Estilos para la sección nosotros, clases testimonio y nosotros ---- */
-
+/*
 .testimonios {
     padding: 0% 1%;
     display: grid;
     grid-template-columns: auto auto;
 
 }
+*/
+.testimonios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'itema1 itema2'
+    'itema3 itema4';
+    grid-gap: 1%;
+    margin: 1%;
+ }
 
-.item1{
-    margin:1%;
+.itema{
+    margin:1.5%;
     padding:1%;
-    border: 2px solid #bdc3c7;
+    border: 2px solid var(--verde_claro);
     border-radius: 4px;
 }
+
+.itema1 {
+    grid-area: itema1;
+}
+.itema2 {
+    grid-area: itema2;
+}
+.itema3 {
+    grid-area: itema3;
+}
+.itema4 {
+    grid-area: itema4;
+}
+
+
 .testimonios, .nosotros {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-style: italic;
-    color: rgb(17 73 47);
 
 }
 .nosotros p {
-    padding: 0.5% 2%;
+    padding: 1% 2.5%;
 }
 /* ---- Estilos para la sección contacto: formulario y mapa ---- */
 #contacto{
@@ -196,10 +233,10 @@ button:hover {
 /* ---- Formulario de contacto ---- */
 .formulario input, .formulario textarea  {
     width: 80%; 
-    padding: 1.5%;
+    padding: 1%;
     font-size: 1rem;
-    margin: 1.2%;
-    border: 2px solid #c6e2cb;
+    margin: 1%;
+    border: 2px solid var(--verde_claro);
     border-radius: 5px;
     font-family:Kanit, Geneva, Tahoma, sans-serif; 
 }
@@ -207,17 +244,15 @@ button:hover {
 .mapa iframe {
     width: 80%;
     height: 85%;
-    border: 2px solid #c6e2cb;
+    border: 2px solid var(--verde_claro);
     border-radius: 8px;
 }
 /* ---- Footer ---- */
 footer {
-    background: linear-gradient(90deg, rgba(66,103,86,1) 50%, rgba(0,255,205,1) 100%);
     padding: 1.5%;
-    color: white;
+    color: var(--blanco);
     border-radius: 8px;
-    font-family: Kanit, Geneva, Tahoma, sans-serif;
-    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .footer_grid {
@@ -232,11 +267,9 @@ footer {
     grid-area: item1;
     align-content: center;
   }
-
   .footer_item2 {
     grid-area: item2;
   }
-
   .footer_item3 {
     grid-area: item3;
   }
@@ -245,16 +278,28 @@ footer {
   }
   .footer_item5 {
     grid-area: item5;
+    padding: 1.5%;
   }
+
 footer a {
-    padding:1.5% ;
+    padding:2% 4%;
+    background-color: var(--naranja);
+    margin:1%;
+    border-radius: 50%;
 }
 
+footer a:hover {
+    background-color:var(--azul);
+}
+
+
+
 /* ---- Activar media queries ---- */
-@media (width< 720px) {
+@media (width<= 720px) 
+{
     body {
         font-family: Roboto, Geneva, Tahoma, sans-serif;
-    }   
+    } 
     .footer_grid {
         display: grid;
         grid-template-columns: 1fr ;
@@ -267,13 +312,39 @@ footer a {
         grid-gap: 1%;
      }
 
+     .testimonios {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-areas: 
+        'itema1'
+        'itema2'
+        'itema3' 
+        'itema4';
+     }
      .contacto_flex{
         flex-direction: column;
         justify-content: center;
- 
-    }
+     }
     .busqueda form {
         flex-direction: column;
         align-items: center;
     }
+    .testimonios, .nosotros, footer {
+        font-size:0.8rem;
+    }
+ 
+    footer a {
+        padding:1% 1%;
+        background-color: var(--naranja);
+        text-align: center;
+    }
+    
 }
+/*
+@media (width<= 360px) {
+  
+    .testimonios, .nosotros, footer {
+        font-size: 0.8rem;
+    
+       }
+ }  

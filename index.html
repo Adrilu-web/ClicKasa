@@ -15,7 +15,7 @@
       <h1>Inmobiliaria ClicKasa</h1>
       -->
       <nav>
-        <img src="img/clickcasa.PNG" >
+        <img src="img/clickcasa.PNG" width= "285" alt="Logo de la Empresa" >
          <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#propiedades">Propiedades</a></li>
@@ -40,26 +40,28 @@
                     <img src="img/casa_moderna4.jpg" alt="Casa de 2 plantas">
                     <h4>Casa de 2 plantas</h4>
                     <p>$250.000 - 3 habitaciones, 2 baños, 200 m²</p>
-                    <a target="_blank" href="http://google.com" class="propiedad_boton">Ver más</a>
+                    <a href="#" class="propiedad_boton">Ver más</a>
                 </div>
                 <div>
                     <img src="img/casa_moderna2.jpg" alt="Casa moderna con altillo">
                     <h4>Casa moderna con altillo</h4>
                     <p>$180.000 - 2 habitaciones, 1 baño, 100 m²</p>
-                    <a target="_blank" href="http://google.com" class="propiedad_boton">Ver más</a>
-                    <!--<button type="submit">Ver más <a target="_blank" href="http://google.com" ></a></button>-->
+                    <a href="#" class="propiedad_boton">Ver más</a>
+              
                 </div>
                 <div>
                     <img src="img/casa_moderna3.jpg" alt="Casa con parque">
                     <h4>Casa con parque</h4>
                     <p>$300,000 - 4 habitaciones, 2 baños, garage, 250 m²</p>
-                    <a target="_blank" href="http://google.com" class="propiedad_boton">Ver más</a>
+                    <a href="#" class="propiedad_boton">Ver más</a>
                 </div>
                 <div>
                     <img src="img/casa_moderna1.jpg" alt="Casa con cancha y pileta">
                     <h4>Casa con cancha y pileta</h4>
                     <p>$450.000 - 4 habitaciones, 2 baños, pileta, 180 m²</p>
-                    <a target="_blank" href="http://google.com" class="propiedad_boton">Ver más</a>
+                    <a href="#" class="propiedad_boton">Ver más</a>
+                    <!--<a target="_blank" href="http://google.com" class="propiedad_boton">Ver más</a>-->
+
                 </div>
             </div> 
             <div class="busqueda">
@@ -75,7 +77,7 @@
                         <option value="lote">Lote</option>
                     </select>
                     <input type="text" name= "Ubicacion" placeholder="Ubicación" >
-                    <button type="submit">Buscar</button>
+                    <button class="propiedad_boton" type="submit">Buscar</button>
                 </form>
             </div>
           </div>
@@ -87,19 +89,19 @@
             </div>
             <h3>Lo que dicen nuestros clientes</h3>
             <div class="testimonios">
-                <div class="item1">
+                <div class="itema itema1">
                     <p>"Necesitaba alquilar un piso rápidamente y Inmobiliaria ClicKasa me encontró varias opciones que se ajustaban a mis necesidades y presupuesto. El proceso de alquiler fue muy rápido y sin complicaciones. Estoy muy contenta con el piso que alquilé y con el servicio que recibí.</p>
                   <p><b>-Ana Gutiérrez-</b></p> 
                 </div>
-                <div class="item1">
+                <div class="itema itema2">
                     <p>"Tenía una propiedad que quería vender lo antes posible y gracias a Inmobiliaria ClicKasa  lo conseguí. Encontraron al comprador ideal en muy poco tiempo y me acompañaron durante todo el proceso de venta. Estoy muy agradecido por su profesionalidad y eficiencia</p>
                     <p><b>-Julio Valiente-</b></p> 
                 </div>
-                <div class="item1">
-                    <p>"Nunca pensé que comprar mi primera casa fuera tan fácil. Gracias a Inmobiliaria ClicKasa, encontré el hogar perfecto para mí. Me mostraron varias opciones hasta que encontré la indicada. ¡Recomiendo totalmente sus servicios!""</p>
+                <div class="itema itema3">
+                    <p>"Nunca pensé que comprar mi primera casa fuera tan fácil. Gracias a Inmobiliaria ClicKasa, encontré el hogar perfecto para mí. Me mostraron varias opciones hasta que encontré la indicada. ¡Recomiendo totalmente sus servicios!"</p>
                     <p><b>-Javier Carbajal-</b></p>
                 </div>
-                <div class="item1">
+                <div class="itema itema4">
                     <p>"Gracias a Inmobiliaria ClicKasa, encontré la casa perfecta para mi familia. ¡Servicio excelente!"</p>
                    <p> <b>-Romina Salustre-</b></p>
                 </div>
@@ -122,9 +124,10 @@
                     <label for="mail"></label>
                     <input type="email" id="mail"  placeholder="Email" size="30" required>            
                     <label>
-                    <textarea name="message"  placeholder="Su consulta" rows="6" cols="30" required></textarea><br>
+                    <textarea name="message"  placeholder="Escribinos tu consulta aquí" rows="6" cols="30" required></textarea><br>
                     </label>
-                    <button type="submit"> Send </button>
+                    <button class="propiedad_boton" type="submit">Enviar </button> 
+                    <button class="propiedad_boton" type="reset">Limpiar</button>
                 </form>
             </div>
             <div class="mapa">
@@ -134,10 +137,8 @@
           </div>
         </section>
     </main>
-    <!-- Activo limpieza de valores del formulario con js--> 
-    <script>
-        document.getElementById("mi_formulario").reset;
-    </script>
+ 
+
     <footer>
         <div class="footer_grid">
             <div class="footer_item1">
@@ -153,12 +154,17 @@
                 Tel: 4823-1235
             </div>
             <div class="footer_item5">
-                <a href=""><i class="fi fi-brands-whatsapp"></i></a>
-                <a href=""><i class="fi fi-brands-instagram"></i></a>
-                <a href=""><i class="fi fi-brands-twitter"  ></i></a>
-                <a href=""><i class="fi fi-brands-linkedin" ></i></a>
+                <a href="#"><i class="fi-brands-whatsapp"></i></a>
+                <a href="#"><i class="fi-brands-instagram"></i></a>
+                <a href="#"><i class="fi-brands-twitter" ></i></a>
+                <a href="#"><i class="fi-brands-linkedin" ></i></a>
             </div>
         </div>   
     </footer>
+    <!-- Activo limpieza de valores del formulario con js
+    <script>
+        document.getElementById("mi_formulario").reset();
+    </script>
+    -----ESTE SCRIPT NO ME FUNCIONÓ --- Agregué un boton que resetea el formulario--> 
 </body>
 </html>
