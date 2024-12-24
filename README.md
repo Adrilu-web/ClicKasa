@@ -11,4 +11,4 @@
 ** Al presionar el botón Ver Mas en cada propiedad, se visualiza el detalle de la propiedad - Se puede visualizar las imagenes de cada propiedad con un scroll** <br>
 ** Con el botón Agregar a favoritos, se guardan cada propiedad en LocalStorae y también se pueden eliminar de la lista de favoritos<br>
 ** Falta activar los CTA en la busqueda de propiedades** <br>
-** Falta agregar un Navbar responsive(tipo menu hamburgesa) con la herramienta Bootstrap o con JS+CSS ** <br>
+** Falta agregar un carrusel para presentar los inmuebles ** <br>
